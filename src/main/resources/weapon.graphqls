@@ -1,0 +1,16 @@
+enum WeaponType {
+    SWORD
+    SPEAR
+}
+
+# Оружие
+type Weapon {
+    # ID
+    id: ID!
+    # Тип оружия
+    type: WeaponType!
+    # Название
+    name: String!
+    # Урон
+    damage: Int!
+}

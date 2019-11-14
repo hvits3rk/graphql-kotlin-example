@@ -4,16 +4,8 @@ type Goblin {
     id: ID!
     # Имя
     name: String!
+    # Оружие
+    weapon: Weapon
     # Здоровичко
     health: Int!
-}
-
-type Query {
-    # Найти гоблина по ID
-    goblin(id: ID): Goblin
-}
-
-type Mutation {
-    # Создать гоблина
-    createGoblin(name: String!, health: Int): Goblin
 }

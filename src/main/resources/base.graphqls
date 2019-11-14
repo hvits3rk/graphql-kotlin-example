@@ -1,0 +1,18 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    # Найти гоблина по ID
+    goblin(id: ID): Goblin
+    # Найти оружие по ID
+    weapon(id: ID): Weapon
+}
+
+type Mutation {
+    # Создать гоблина
+    createGoblin(name: String!, weaponId: Int, health: Int = 10): Goblin
+    # Создать оружие
+    createWeapon(type: WeaponType!, name: String!, damage: Int = 1): Weapon
+}
