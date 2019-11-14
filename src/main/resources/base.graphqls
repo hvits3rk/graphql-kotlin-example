@@ -4,15 +4,37 @@ schema {
 }
 
 type Query {
-    # Найти гоблина по ID
-    goblin(id: ID): Goblin
-    # Найти оружие по ID
-    weapon(id: ID): Weapon
+    # Найти гоблина
+    goblin(input: InputQueryGoblin!): Goblin
+
+    # Найти оружие
+    weapon(input: InputQueryWeapon!): Weapon
 }
 
 type Mutation {
     # Создать гоблина
-    createGoblin(name: String!, weaponId: Int, health: Int = 10): Goblin
+    createGoblin(input: InputCreateGoblin!): Goblin
+
     # Создать оружие
-    createWeapon(type: WeaponType!, name: String!, damage: Int = 1): Weapon
+    createWeapon(input: InputCreateWeapon!): Weapon
+}
+
+input InputQueryGoblin {
+    id: ID
+}
+
+input InputQueryWeapon {
+    id: ID
+}
+
+input InputCreateGoblin {
+    name: String
+    weaponId: Int
+    health: String
+}
+
+input InputCreateWeapon {
+    weaponType: WeaponType
+    name: String
+    damage: Int
 }

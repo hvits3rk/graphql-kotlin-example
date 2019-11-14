@@ -10,7 +10,7 @@ enum class WeaponType {
 @Table
 @Entity
 class Weapon(@Enumerated(EnumType.STRING)
-             var type: WeaponType,
+             var weaponType: WeaponType,
 
              var name: String,
 

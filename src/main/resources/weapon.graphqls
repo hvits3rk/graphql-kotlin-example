@@ -1,5 +1,8 @@
+# Тип оружия
 enum WeaponType {
+    # Меч
     SWORD
+    # Копье
     SPEAR
 }
 
@@ -8,7 +11,7 @@ type Weapon {
     # ID
     id: ID!
     # Тип оружия
-    type: WeaponType!
+    weaponType: WeaponType!
     # Название
     name: String!
     # Урон
