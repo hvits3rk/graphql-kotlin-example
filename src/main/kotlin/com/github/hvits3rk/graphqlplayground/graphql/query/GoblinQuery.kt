@@ -1,4 +1,4 @@
-package com.github.hvits3rk.graphqlplayground.graphql.resolver
+package com.github.hvits3rk.graphqlplayground.graphql.query
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver
 import com.github.hvits3rk.graphqlplayground.graphql.input.InputQueryGoblin
